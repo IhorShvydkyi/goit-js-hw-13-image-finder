@@ -1,8 +1,7 @@
 import ImageApiService from '../js/apiService';
 import cardTmpl from '../template/card.hbs';
 import getRefs from '../js/get-refs';
-
-
+import { onGalleryClick } from '../js/modal';
 
 
 const refs = getRefs();
@@ -10,6 +9,7 @@ const apiService = new ImageApiService();
 
 refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', onLoadMore);
+refs.gallery.addEventListener('click', onGalleryClick);
 
 function onSearch(evt) {
 	evt.preventDefault();
